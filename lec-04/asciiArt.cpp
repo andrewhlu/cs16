@@ -17,6 +17,19 @@ string drawSquare(int width) {
 	return result;
 }
 
+string drawRightTriangle(int width) {
+	string result = "";
+
+	for(int i = 0;i < width; i++) {
+		for(int j = 0;j <= i; j++) {
+			result += "*";
+		}
+		result+="\n";
+	}
+
+	return result;
+}
+
 int main(int argc, char* argv[]) {
 	if(argc != 2) {
 		cerr << "Usage: " << argv[0] << " width" << endl;
@@ -24,6 +37,8 @@ int main(int argc, char* argv[]) {
 	}
 
 	int width = atoi(argv[1]);
-	string sq = drawSquare(width);
-	cout << sq << endl;
+	string sq1 = drawSquare(width);
+	cout << sq1 << endl;
+	string sq2 = drawRightTriangle(width);
+	cout << sq2 << endl;
 }
