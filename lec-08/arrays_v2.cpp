@@ -1,8 +1,22 @@
 #include <iostream>
 using namespace std;
 
+double averageScore(double sc[], int length); //Declaration
+
+double averageScore(double sc[], int length) {
+	double sum = 0;
+	for(int i = 0; i < 5; i++) {
+		sum += sc[i];
+	}
+
+	return (sum/length);
+}
+
 int main() {
 	double scores[5] = {100,90,99,50,40};
+
+	double result;
+	result = averageScore(scores, 5);
 
 	for(int i = 0; i < 5; i++) {
 		cout << scores[i] << endl;
@@ -21,4 +35,6 @@ int main() {
 	cout << "Size of a double: " << sizeof(double) << endl;
 
 	cout << "Average midterm score is : " << sum/(sizeof(scores)/sizeof(double)) << endl;
+
+	cout << "Average calculated by function: " << result << endl;
 }
