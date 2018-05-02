@@ -1,24 +1,33 @@
 #include <iostream>
 using namespace std;
 
-double averageScore(double sc[], int length);
+void swapValue(int* x, int* y) {
+	int tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
 
 int main() {
-	int* p;
-	int y = 3;
+	int a = 30, b = 40;
+	swapValue(&a, &b);
 
-	p = &y;
+	cout << "A = " << a << " B = " << b << endl;
 
-	cout << "Address of p is: " << &p << endl;
-	cout << "Value of p is: " << p << endl;
-	cout << "Value of *p is: " << *p << endl;
-	cout << "Value of y is: " << y << endl;
+	// int* p;
+	// int y = 3;
 
-	*p = 5;
+	// p = &y;
 
-	cout << "After changing y to 5" << endl;
-	cout << "Address of p is: " << &p << endl;
-	cout << "Value of p is: " << p << endl;
-	cout << "Value of *p is: " << *p << endl;
-	cout << "Value of y is: " << y << endl;
+	// cout << "Address of p is: " << &p << endl;
+	// cout << "Value of p is: " << p << endl;
+	// cout << "Value of *p is: " << *p << endl;
+	// cout << "Value of y is: " << y << endl;
+
+	// *p = 5;
+
+	// cout << "After changing y to 5" << endl;
+	// cout << "Address of p is: " << &p << endl;
+	// cout << "Value of p is: " << p << endl;
+	// cout << "Value of *p is: " << *p << endl;
+	// cout << "Value of y is: " << y << endl;
 }
