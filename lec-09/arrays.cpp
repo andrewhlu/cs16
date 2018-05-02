@@ -9,6 +9,15 @@ int main() {
 
 	p = &y;
 
+	cout << "Address of p is: " << &p << endl;
+	cout << "Value of p is: " << p << endl;
+	cout << "Value of *p is: " << *p << endl;
+	cout << "Value of y is: " << y << endl;
+
+	*p = 5;
+
+	cout << "After changing y to 5" << endl;
+	cout << "Address of p is: " << &p << endl;
 	cout << "Value of p is: " << p << endl;
 	cout << "Value of *p is: " << *p << endl;
 	cout << "Value of y is: " << y << endl;
