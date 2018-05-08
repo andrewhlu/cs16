@@ -18,11 +18,22 @@ void printBox(Box b){
 	cout << "Height: " << b.height << endl;
 }
 
-int main() {
-	Box b1 = {{500,600},10,20};
-	b1.ul.x = 50;
+void initBox(Box* b, Point p, double w, double h) {
+	b.ul = p;
+	b.width = w;
+	b.height = h;
+}
 
+int main() {
+	//Box b1 = {{500,600},10,20};
+	//b1.ul.x = 50
+
+	Box b1;
+	Point p = {500,600};
 	cout << "Created a box" << endl;
+
+	initBox(b1, p, 10, 20);
+
 	printBox(b1);
 
 	return 0;
