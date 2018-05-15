@@ -1,5 +1,5 @@
-#CXX = g++
-CXX = clang++
+CXX = g++
+#CXX = clang++
 
 CXXFLAGS = -Wall -Wno-uninitialized
 
