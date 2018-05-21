@@ -6,7 +6,10 @@ void createHeap() {
 }
 
 int main() {
+	int counter = 0;
 	while(true) {
 		createHeap();
+		counter++;
+		cout << "Number of heap variables: " << counter << endl;
 	}
 }
