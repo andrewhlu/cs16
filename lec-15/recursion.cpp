@@ -25,6 +25,16 @@ int countOddRecursive(int a[], int len) {
 	}
 }
 
+int countOddIterative(int a[], int len) {
+	int count = 0;
+	for(int i = 0; i < len; i++) {
+		if(a[i] % 2 == 1) {
+			count++;
+		}
+	}
+	return count;
+}
+
 void funWithArrays() {
 	int arr[] = {5,3,2,1,345,46,66,6,5,13,10};
 	int len = sizeof(arr)/sizeof(int);
@@ -33,6 +43,7 @@ void funWithArrays() {
 	cout << endl;
 	
 	cout << "# Odd (R) " << countOddRecursive(arr, len) << endl;
+	cout << "# Odd (I) " << countOddIterative(arr, len) << endl;
 }
 
 int main() {
