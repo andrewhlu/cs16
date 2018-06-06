@@ -5,7 +5,7 @@ using namespace std;
 #include <string>
 bool isAnagram(string s1, string s2);
 
-bool isPalindrome(const string s1);
+bool isPalindrome(string s1);
 
 //Custom functions
 void alphaCount(int* arr, string s);

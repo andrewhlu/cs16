@@ -45,27 +45,23 @@ bool isAlphaArrayEqual(int* arr1, int* arr2, int len) {
 		return false;
 	}
 	else {
-		isAlphaArrayEqual(arr1, arr2, len-1);
+		return isAlphaArrayEqual(arr1, arr2, len-1);
 	}
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
  * Postcondition: Returns true if s1 is a palindrome, false otherwise
  *You should provide a recursive solution*/
-bool isPalindrome(const string s1){
+bool isPalindrome(string s1){
 	int len = s1.length();
-	cout << len << " " << s1 << endl;
 	if(len == 1 || len == 0) {
 		return true;
 	}
-
-	cout << (tolower(s1[0]) != tolower(s1[len-1])) << endl;
-
-	if(tolower(s1[0]) != tolower(s1[len-1])) {
+	else if(tolower(s1[0]) != tolower(s1[len-1])) {
 		return false;
 	}
   else {
-  	isPalindrome(s1.substr(1,len-2));
+  	return isPalindrome(s1.substr(1,len-2));
   }
 }
 
@@ -76,15 +72,7 @@ int main() {
 
 	cout << "Are strings anagrams? " << isAnagram(s1,s2) << endl;
 
-	string s3 = "racedcar";
-
-	if(isPalindrome(s3)) {
-		cout << "Is string palindrome? yes" << endl;
-	}
-	else {
-		cout << "Is string palindrome? no" << endl;
-	}
+	string s3 = "detartrated";
 
 	cout << "Is string palindrome? " << isPalindrome(s3) << endl;
-	return 0;
 }
