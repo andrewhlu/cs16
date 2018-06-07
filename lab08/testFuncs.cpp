@@ -44,64 +44,64 @@ int main(int argc, char* argv[]) {
 			string s10 = "I love to debug";
 			ASSERT_FALSE(isAnagram(s9, s10));
 		}
-	else if(testNum == 2) {
-		START_TEST_GROUP("IS_PALINDROME");
+		else if(testNum == 2) {
+			START_TEST_GROUP("IS_PALINDROME");
 
-		string s1 = "racedcar";
-		ASSERT_FALSE(isPalindrome(s1));
+			string s1 = "racedcar";
+			ASSERT_FALSE(isPalindrome(s1));
 
-		string s2 = "Hannah";
-		ASSERT_TRUE(isPalindrome(s2));
+			string s2 = "Hannah";
+			ASSERT_TRUE(isPalindrome(s2));
 
-		string s3 = "ASDFGHJKLlkjhgfdsa";
-		ASSERT_TRUE(isPalindrome(s3));
+			string s3 = "ASDFGHJKLlkjhgfdsa";
+			ASSERT_TRUE(isPalindrome(s3));
 
-		string s4 = "Tacocat";
-		ASSERT_TRUE(isPalindrome(s4));
+			string s4 = "Tacocat";
+			ASSERT_TRUE(isPalindrome(s4));
 
-		string s5 = "Andrea";
-		ASSERT_FALSE(isPalindrome(s5));
+			string s5 = "Andrea";
+			ASSERT_FALSE(isPalindrome(s5));
+		}
+		else if(testNum == 3) {
+			START_TEST_GROUP("RECURSIVE_SUM");
+
+			int arr1[] = {3, 16, 25, 64, 9, 42};
+			LinkedList* list1 = arrayToLinkedList(arr1, 6);
+			ASSERT_EQUALS(159, recursiveSum(list1->head));
+
+			int arr2[] = {30, 20, 30, 20};
+			LinkedList* list2 = arrayToLinkedList(arr2, 4);
+			ASSERT_EQUALS(100, recursiveSum(list2->head));
+
+			int arr3[] = {1, 2, 3, 5, 7, 9};
+			LinkedList* list3 = arrayToLinkedList(arr3, 6);
+			ASSERT_EQUALS(27, recursiveSum(list3->head));
+
+			int arr4[] = {63};
+			LinkedList* list4 = arrayToLinkedList(arr4, 1);
+			ASSERT_EQUALS(63, recursiveSum(list4->head));
+
+			Node* emptyNode = NULL;
+			ASSERT_EQUALS(0, recursiveSum(emptyNode));
+		}
+		else if(testNum == 4) {
+			START_TEST_GROUP("RECURSIVE_LARGEST_VALUE");
+
+			int arr1[] = {2, 7, 9, 3, 10, 5, 6, 8, 1, 4};
+			LinkedList* list1 = arrayToLinkedList(arr1, 10);
+			ASSERT_EQUALS(10, recursiveLargestValue(list1->head));
+
+			int arr2[] = {6441, 8230, 169, 977, 699, 8231};
+			LinkedList* list2 = arrayToLinkedList(arr2, 6);
+			ASSERT_EQUALS(8231, recursiveLargestValue(list2->head));
+
+			int arr3[] = {90, 70, 50, 30, 10};
+			LinkedList* list3 = arrayToLinkedList(arr3, 5);
+			ASSERT_EQUALS(90, recursiveLargestValue(list3->head));
+
+			int arr4[] = {32};
+			LinkedList* list4 = arrayToLinkedList(arr4, 1);
+			ASSERT_EQUALS(32, recursiveLargestValue(list4->head));
+		}
 	}
-	else if(testNum == 3) {
-		START_TEST_GROUP("RECURSIVE_SUM");
-
-		int arr1[] = {3, 16, 25, 64, 9, 42};
-		LinkedList* list1 = arrayToLinkedList(arr1, 6);
-		ASSERT_EQUALS(159, recursiveSum(list1->head));
-
-		int arr2[] = {30, 20, 30, 20};
-		LinkedList* list2 = arrayToLinkedList(arr2, 4);
-		ASSERT_EQUALS(100, recursiveSum(list2->head));
-
-		int arr3[] = {1, 2, 3, 5, 7, 9};
-		LinkedList* list3 = arrayToLinkedList(arr3, 6);
-		ASSERT_EQUALS(27, recursiveSum(list3->head));
-
-		int arr4[] = {63};
-		LinkedList* list4 = arrayToLinkedList(arr4, 1);
-		ASSERT_EQUALS(63, recursiveSum(list4->head));
-
-		Node* emptyNode = NULL;
-		ASSERT_EQUALS(0, recursiveSum(emptyNode));
-	}
-	else if(testNum == 4) {
-		START_TEST_GROUP("RECURSIVE_LARGEST_VALUE");
-
-		int arr1[] = {2, 7, 9, 3, 10, 5, 6, 8, 1, 4};
-		LinkedList* list1 = arrayToLinkedList(arr1, 10);
-		ASSERT_EQUALS(10, recursiveLargestValue(list1->head));
-
-		int arr2[] = {6441, 8230, 169, 977, 699, 8231};
-		LinkedList* list2 = arrayToLinkedList(arr2, 6);
-		ASSERT_EQUALS(8231, recursiveLargestValue(list2->head));
-
-		int arr3[] = {90, 70, 50, 30, 10};
-		LinkedList* list3 = arrayToLinkedList(arr3, 5);
-		ASSERT_EQUALS(90, recursiveLargestValue(list3->head));
-
-		int arr4[] = {32};
-		LinkedList* list4 = arrayToLinkedList(arr4, 1);
-		ASSERT_EQUALS(32, recursiveLargestValue(list4->head));
-	}
-}
 }

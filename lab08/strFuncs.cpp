@@ -6,7 +6,6 @@
 #include "strFuncs.h"
 using namespace std;
 
-
 /* Precondition: Two valid strings s1 and s2, each containing a mix of alphabets, spaces and punctuations
  * Post condition: Return true if one string is an anagram of the other string. White spaces, punctuations and
  * the case for the letters (upper or lower) should not
@@ -64,15 +63,3 @@ bool isPalindrome(string s1){
   	return isPalindrome(s1.substr(1,len-2));
   }
 }
-
-//Custom main function
-// int main() {
-// 	string s1 = "one plus twelve";
-// 	string s2 = "TwoPlusEleven";
-
-// 	cout << "Are strings anagrams? " << isAnagram(s1,s2) << endl;
-
-// 	string s3 = "detartrated";
-
-// 	cout << "Is string palindrome? " << isPalindrome(s3) << endl;
-// }
