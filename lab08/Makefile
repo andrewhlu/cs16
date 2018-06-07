@@ -13,6 +13,7 @@ tests: ${BINARIES}
 	./testFuncs 1
 	./testFuncs 2
 	./testFuncs 3
+	./testFuncs 4
 
 testFuncs: testFuncs.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@

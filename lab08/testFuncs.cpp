@@ -84,5 +84,24 @@ int main(int argc, char* argv[]) {
 		Node* emptyNode = NULL;
 		ASSERT_EQUALS(0, recursiveSum(emptyNode));
 	}
+	else if(testNum == 4) {
+		START_TEST_GROUP("RECURSIVE_LARGEST_VALUE");
+
+		int arr1[] = {2, 7, 9, 3, 10, 5, 6, 8, 1, 4};
+		LinkedList* list1 = arrayToLinkedList(arr1, 10);
+		ASSERT_EQUALS(10, recursiveLargestValue(list1->head));
+
+		int arr2[] = {6441, 8230, 169, 977, 699, 8231};
+		LinkedList* list2 = arrayToLinkedList(arr2, 6);
+		ASSERT_EQUALS(8231, recursiveLargestValue(list2->head));
+
+		int arr3[] = {90, 70, 50, 30, 10};
+		LinkedList* list3 = arrayToLinkedList(arr3, 5);
+		ASSERT_EQUALS(90, recursiveLargestValue(list3->head));
+
+		int arr4[] = {32};
+		LinkedList* list4 = arrayToLinkedList(arr4, 1);
+		ASSERT_EQUALS(32, recursiveLargestValue(list4->head));
+	}
 }
 }
