@@ -3,17 +3,18 @@ CXX = g++
 
 CXXFLAGS = -Wall -Wno-uninitialized
 
-BINARIES= strFuncsTest
+BINARIES= testFuncs
 
-COMMON_OBJECT_FILES = strFuncs.o tddFuncs.o
+COMMON_OBJECT_FILES = strFuncs.o tddFuncs.o recLinkedListFuncs.o linkedListFuncs.o
 
 all: ${BINARIES}
 
 tests: ${BINARIES}
-	./strFuncsTest 1
-	./strFuncsTest 2
+	./testFuncs 1
+	./testFuncs 2
+	./testFuncs 3
 
-strFuncsTest: strFuncsTest.o ${COMMON_OBJECT_FILES}
+testFuncs: testFuncs.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 clean:
