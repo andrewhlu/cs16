@@ -11,6 +11,7 @@ all: ${BINARIES}
 
 tests: ${BINARIES}
 	./strFuncsTest 1
+	./strFuncsTest 2
 
 strFuncsTest: strFuncsTest.o ${COMMON_OBJECT_FILES}
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
