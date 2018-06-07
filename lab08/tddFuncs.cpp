@@ -58,6 +58,16 @@ void assertTrue(bool expression,
   }
 }
 
+void assertFalse(bool expression,
+      std::string message) {
+  if (!expression) {
+    cout << "PASSED: " << message << endl;;
+  } else {
+    cout << "   FAILED: " << message << endl 
+   << "     Expected false, but was true " << endl;
+  }
+}
+
 void startTestGroup(std::string name){
   cout << "--------------" << name << "--------------" << endl;
 }

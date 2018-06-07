@@ -23,6 +23,10 @@ void assertTrue(bool expression, std::string message="");
 
 #define ASSERT_TRUE(expression) assertTrue(expression,#expression)
 
+void assertFalse(bool expression, std::string message="");
+
+#define ASSERT_FALSE(expression) assertFalse(expression,#expression)
+
 void assertNotNull(Node* actual, std::string message);
 
 #define ASSERT_NOT_NULL(actual) assertNotNull(actual,#actual)

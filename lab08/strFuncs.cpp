@@ -66,13 +66,13 @@ bool isPalindrome(string s1){
 }
 
 //Custom main function
-int main() {
-	string s1 = "one plus twelve";
-	string s2 = "TwoPlusEleven";
+// int main() {
+// 	string s1 = "one plus twelve";
+// 	string s2 = "TwoPlusEleven";
 
-	cout << "Are strings anagrams? " << isAnagram(s1,s2) << endl;
+// 	cout << "Are strings anagrams? " << isAnagram(s1,s2) << endl;
 
-	string s3 = "detartrated";
+// 	string s3 = "detartrated";
 
-	cout << "Is string palindrome? " << isPalindrome(s3) << endl;
-}
+// 	cout << "Is string palindrome? " << isPalindrome(s3) << endl;
+// }
