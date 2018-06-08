@@ -6,6 +6,9 @@
 #include "strFuncs.h"
 using namespace std;
 
+void alphaCount(int* arr, string s);
+bool isAlphaArrayEqual(int* arr1, int* arr2, int len);
+
 /* Precondition: Two valid strings s1 and s2, each containing a mix of alphabets, spaces and punctuations
  * Post condition: Return true if one string is an anagram of the other string. White spaces, punctuations and
  * the case for the letters (upper or lower) should not
