@@ -1,21 +1,29 @@
+//Inverted Triangle
 #include <iostream>
-#include <cstring>
-#include <string>
-#include <cctype>
-#include <cassert>
-#include <sstream>
+#include <cstdlib>
 using namespace std;
 
-struct Node {
-  char data;
-  Node *next;
-};
+int main(int argc, char* argv[]) {
+	if(argc != 2) {
+		cerr << "Usage: " << argv[0] << " width" << endl;
+		exit(1);
+	}
+	string out = "";
+	for(int i = 0; i < atoi(argv[1]); i++) {
+		//Print spaces
+		for(int j = 0; j < i; j++) {
+			out += " ";
+		}
+		//Print stars
+		for(int j = 0; j < atoi(argv[1])-i; j++) {
+			out += "*";
+		}
+		out += "\n";
+	}
+	cout << out;
+}
 
-struct LinkedList {
-  Node *head;
-  Node *tail;
-};
-
+//Linked List, Strings
 //Precondition: The address of a valid LinkedList and a char value //that may be an alphabet in either lower or upper case
 //Postcondition: Adds a new node with data element set to value to the //end of the linked list. 
 void addToEndOfList(LinkedList* list, char value) {
@@ -112,35 +120,24 @@ int countChar(LinkedList* list, char value) {
 	return countCharHelper(list->head, value);
 }
 
+//Strings Reference
+//Char array or array of chars
+char arr[] = {'J','i','l','l'};
 
-//Test function (from lab08)
-std::string charToString(char i) {
-// creates a stream like cout, cerr that writes to a string
-  std::ostringstream oss; 
-  oss << i;
-  return oss.str(); // return the string result
-}
+//C-string
+char arr2[] = {'J','i','l','l','\0'};
+char arr3[] = "Jill"; //automatically inserts 0 char at end
 
-string linkedListToString(LinkedList *list) {
-  string result="";
-  for(const Node* p=list->head; p!=NULL; p=p->next) {
-    result += "[" + charToString(p->data) + "]->";
-  }
-  result += "null";
-  return result;
-}
+//The C++ string class methods
+string fruit = "Apple";
+int len = fruit.length(); //5
+int pos = fruit.find('l'); //3
+string part = fruit.substr(1,3); //get 3 characters starting at position 1, "ppl"
+fruit.erase(2,3); //remove 3 characters starting at position 2, "Ap"
+fruit.insert(2, "ricot"); //"Apricot"
+friot.replace(2,5,"ple"); //"Apple"
 
-//Written code
-int main() {
-	LinkedList* list = new LinkedList;
-	list -> head = 0;
-	list -> tail = 0;
-	addToEndOfList(list, 'a');
-	cout << linkedListToString(list) << endl;
-
-	char arr[] = "Mississippi";
-	LinkedList* arrToList = arrayToLinkedList(arr, 11);
-	cout << linkedListToString(arrToList) << endl;
-	cout << countCharIterative(arrToList, 's') << endl;
-	cout << countChar(arrToList, 'i') << endl;
-}
+//Check out cctype for checks and conversions on characters
+fruit[0].tolower(fruit[0]);
+isalpha(fruit[0]); //Checks for a-z, not case sensitive
+isalnum(fruit[0]); //Checks for a-z and 0-9, not case sensitive

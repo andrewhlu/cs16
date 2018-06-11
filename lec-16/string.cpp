@@ -9,7 +9,7 @@ char arr3[] = "Jill"; //automatically inserts 0 char at end
 string fruit = "Apple";
 int len = fruit.length(); //5
 int pos = fruit.find('l'); //3
-string part = fruit.substr(1,3); //"ppl"
+string part = fruit.substr(1,3); //get 3 characters starting at position 1, "ppl"
 fruit.erase(2,3); //remove 3 characters starting at position 2, "Ap"
 fruit.insert(2, "ricot"); //"Apricot"
 friot.replace(2,5,"ple"); //"Apple"
